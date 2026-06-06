@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Marcus Vincius</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><span data-i18n="title_main">Dev Marcus Vincius</span></h1>
+        <nav>
+            <ul class="navegacao-primaria">
+                <li><a href="#sobre-mim"><span data-i18n="nav_about">Sobre</span></a></li>
+                <li><a href="#projetos"><span data-i18n="nav_projects">Projetos</span></a></li>
+                <li><a href="#habilidades"><span data-i18n="nav_skills">Habilidades</span></a></li>
+                <li><a href="#contato"><span data-i18n="nav_contact">Contato</span></a></li>
+                <li><a href="#certificados"><span data-i18n="nav_certificates">Certificados</span></a></li>
+            </ul>
+        </nav>
+        <button id="translate-btn" class="language-toggle" aria-label="Mudar para inglês">EN 🇺🇸</button>
+    </header>
+    <section aria-label="curriculo de marcus" class="section-div">
+        <div>
+            <h2 data-i18n="hero_greeting">Olá! Sou Marcus Vincius,</h2>
+            <h2 data-i18n="hero_role">Desenvolvedor Web</h2>
+            <p data-i18n="hero_paragraph">Apaixonado por criar soluções inovadoras e eficientes, utilizando tecnologias modernas para resolver problemas complexos. Comprometido com a excelência e a entrega de resultados de alta qualidade.</p>
+            <a href="assets/Currículo - Marcus Vinicius.pdf" download class="btn-download"><span data-i18n="download_cv"><i class="fas fa-download"></i> Download CV</span></a>
+        </div>
+        <img src="assets/FotoMarcus.png" alt="Foto de Marcus Vincius" class="foto-marcus" data-i18n-alt="hero_image_alt">
+    </section>
+    <section id="sobre-mim" class="sobre-mim fade-in">
+        <h1 class="titulo-sobre" data-i18n="title_about">Sobre Mim</h1>
+        <p data-i18n="about_paragraph">Com 19 anos, sou estudante de <span>Ciência da Computação</span> no terceiro período, dedicado ao desenvolvimento de software e ao aprimoramento técnico contínuo. <br><br>
+
+        Formado como <span>técnico em Informática para Internet</span> pelo SENAI CIMATEC, onde conquistei uma bolsa de estudos, fortalecendo minha disciplina e senso de responsabilidade. <br><br>
+
+        Minha paixão reside no desenvolvimento web e em soluções tecnológicas inovadoras, sempre priorizando boas práticas, código organizado e pensamento analítico para construir aplicações eficientes e escaláveis. <br><br>
+
+        Busco oportunidades em Tecnologia da Informação para contribuir ativamente, aprender com experts e crescer profissionalmente, aplicando proatividade e dedicação em cada desafio.</p>
+    </section>
+    <section id="projetos" class="section-projetos fade-in">
+        <h1 class="titulo-projetos" data-i18n="title_projects">Projetos</h1>
+        <div class="projetos-grid">
+            <article class="project-card">
+                <img src="https://via.placeholder.com/400x250?text=Projeto+1" alt="Imagem do Projeto 1" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title" data-i18n="project1_title">Projeto 1</h2>
+                    <p class="project-description" data-i18n="project1_desc">Aplicação web desenvolvida para demonstrar habilidades em front-end e back-end, focando em usabilidade e performance.</p>
+                    <a href="#" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="project1_link"><i class="fab fa-github"></i> Ver Repositório</a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="https://via.placeholder.com/400x250?text=Projeto+2" alt="Imagem do Projeto 2" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title" data-i18n="project2_title">Projeto 2</h2>
+                    <p class="project-description" data-i18n="project2_desc">Sistema responsivo criado com tecnologias modernas, enfatizando design intuitivo e integração de APIs.</p>
+                    <a href="#" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="project2_link"><i class="fab fa-github"></i> Ver Repositório</a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="https://via.placeholder.com/400x250?text=Projeto+3" alt="Imagem do Projeto 3" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title" data-i18n="project3_title">Projeto 3</h2>
+                    <p class="project-description" data-i18n="project3_desc">Projeto pessoal que explora novas ferramentas e frameworks, visando inovação e aprendizado contínuo.</p>
+                    <a href="#" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="project3_link"><i class="fab fa-github"></i> Ver Repositório</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section id="habilidades" class="section-habilidades fade-in">
+        <h1 class="titulo-habilidades" data-i18n="title_skills">Habilidades</h1>
+        <div class="habilidades-grid">
+            <div class="habilidade-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML & CSS</h3>
+                <p data-i18n="skill_html_desc">Criação de layouts responsivos e estilização moderna com foco em acessibilidade.</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fab fa-js-square"></i>
+                <h3>JavaScript</h3>
+                <p data-i18n="skill_js_desc">Desenvolvimento de funcionalidades interativas e manipulação eficiente do DOM.</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <p data-i18n="skill_react_desc">Construção de interfaces dinâmicas e componentes reutilizáveis.</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+                <p data-i18n="skill_node_desc">Desenvolvimento de aplicações backend e APIs robustas.</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+                <p data-i18n="skill_git_desc">Controle de versão e colaboração eficaz em equipes.</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fas fa-database"></i>
+                <h3>SQL</h3>
+                <p data-i18n="skill_sql_desc">Gerenciamento e otimização de bancos de dados relacionais.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contato" class="section-contato fade-in">
+        <h1 class="titulo-contato" data-i18n="title_contact">Contato</h1>
+        <div class="contato-content">
+            <p data-i18n="contact_intro">Interessado em oportunidades de colaboração? Vamos conversar!</p>
+            <div class="contato-info">
+                <p><i class="fas fa-envelope"></i> <strong data-i18n="contact_email_label">Email:</strong> seuemail@example.com</p>
+                <p><i class="fab fa-linkedin"></i> <strong data-i18n="contact_linkedin_label">LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/marcusvincius</a></p>
+                <p><i class="fab fa-github"></i> <strong data-i18n="contact_github_label">GitHub:</strong> <a href="#" target="_blank">github.com/marcusvincius</a></p>
+            </div>
+        </div>
+    </section>
+    <section id="certificados" class="section-certificados fade-in">
+        <h1 class="titulo-certificados" data-i18n="title_certificates">Certificados</h1>
+        <div class="certificados-grid">
+            <div class="certificado-card">
+                <i class="fas fa-certificate"></i>
+                <h3 data-i18n="certificate1_title">Técnico em Informática para Internet - SENAI CIMATEC</h3>
+                <p data-i18n="certificate1_desc">Formação técnica abrangente em desenvolvimento web e tecnologias digitais.</p>
+            </div>
+            <div class="certificado-card">
+                <i class="fas fa-certificate"></i>
+                <h3 data-i18n="certificate2_title">Certificado em JavaScript - Plataforma Online</h3>
+                <p data-i18n="certificate2_desc">Especialização avançada em JavaScript e desenvolvimento front-end.</p>
+            </div>
+            <div class="certificado-card">
+                <i class="fas fa-certificate"></i>
+                <h3 data-i18n="certificate3_title">Certificado em React - Plataforma Online</h3>
+                <p data-i18n="certificate3_desc">Aprofundamento em React para criação de aplicações web modernas.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p data-i18n="footer_text">&copy; 2026 Marcus Vincius. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
