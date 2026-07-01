@@ -42,5 +42,11 @@
 "certificate2_desc": "Especialização avançada em JavaScript e desenvolvimento front-end.",
 "certificate3_title": "Certificado em React - Plataforma Online",
 "certificate3_desc": "Aprofundamento em React para criação de aplicações web modernas.",
-"footer_text": "© 2026 Marcus Vincius. Todos os direitos reservados."
+"footer_text": "© 2026 Marcus Vincius. Todos os direitos reservados.",
+"skill_python_desc": "Desenvolvimento de scripts, automações e aplicações back-end.",
+"skill_django_desc": "Criação de aplicações web robustas com o framework Django.",
+"stat_semesters": "Semestres em C.C.",
+"stat_technologies": "Tecnologias",
+"stat_years": "Anos de estudo",
+"stat_scholarship": "Bolsa SENAI"
 }

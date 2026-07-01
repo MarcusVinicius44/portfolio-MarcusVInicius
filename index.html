@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Marcus Vincius</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1><span data-i18n="title_main">Dev Marcus Vincius</span></h1>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <a href="#" class="logo">
+            <span class="logo-bracket">&lt;</span>MV<span class="logo-bracket">/&gt;</span>
+        </a>
+        <i id="burguer" class="fas fa-bars" role="button" tabindex="0" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-primario"></i>
         <nav>
-            <ul class="navegacao-primaria">
+            <ul class="navegacao-primaria" id="menu-primario">
                 <li><a href="#sobre-mim"><span data-i18n="nav_about">Sobre</span></a></li>
                 <li><a href="#projetos"><span data-i18n="nav_projects">Projetos</span></a></li>
                 <li><a href="#habilidades"><span data-i18n="nav_skills">Habilidades</span></a></li>
@@ -21,128 +28,276 @@
         </nav>
         <button id="translate-btn" class="language-toggle" aria-label="Mudar para inglês">EN 🇺🇸</button>
     </header>
-    <section aria-label="curriculo de marcus" class="section-div">
-        <div>
-            <h2 data-i18n="hero_greeting">Olá! Sou Marcus Vincius,</h2>
-            <h2 data-i18n="hero_role">Desenvolvedor Web</h2>
-            <p data-i18n="hero_paragraph">Apaixonado por criar soluções inovadoras e eficientes, utilizando tecnologias modernas para resolver problemas complexos. Comprometido com a excelência e a entrega de resultados de alta qualidade.</p>
-            <a href="assets/Currículo - Marcus Vinicius.pdf" download class="btn-download"><span data-i18n="download_cv"><i class="fas fa-download"></i> Download CV</span></a>
+
+    <!-- HERO -->
+    <section aria-label="curriculo de marcus" class="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">&lt; dev /&gt;</span>
+                <h1 class="hero-name">Marcus Vincius</h1>
+                <div class="hero-role-line">
+                    <span class="terminal-prefix">$ </span>
+                    <span id="typing-text" class="typing-text"></span>
+                    <span class="cursor">▋</span>
+                </div>
+                <p class="hero-paragraph" data-i18n="hero_paragraph">Apaixonado por criar soluções inovadoras e eficientes, utilizando tecnologias modernas para resolver problemas complexos. Comprometido com a excelência e a entrega de resultados de alta qualidade.</p>
+                <div class="hero-cta">
+                    <a href="assets/Currículo - Marcus Vinicius.pdf" download class="btn-primary">
+                        <span data-i18n="download_cv"><i class="fas fa-download"></i> Download CV</span>
+                    </a>
+                    <a href="#projetos" class="btn-ghost">
+                        <span data-i18n="nav_projects">Projetos</span> <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-area">
+                <div class="image-container">
+                    <div class="image-ring"></div>
+                    <img src="assets/FotoMarcus.png" alt="Foto de Marcus Vincius" class="foto-marcus" data-i18n-alt="hero_image_alt">
+                </div>
+                <div class="floating-badge badge-1"><i class="fab fa-js-square"></i> JavaScript</div>
+                <div class="floating-badge badge-2"><i class="fab fa-react"></i> React</div>
+                <div class="floating-badge badge-3"><i class="fab fa-node-js"></i> Node.js</div>
+                <div class="floating-badge badge-4"><i class="fab fa-python"></i> Python</div>
+                <div class="floating-badge badge-5"><img src="assets/django.svg" class="badge-svg" alt="Django"> Django</div>
+            </div>
         </div>
-        <img src="assets/FotoMarcus.png" alt="Foto de Marcus Vincius" class="foto-marcus" data-i18n-alt="hero_image_alt">
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
     </section>
-    <section id="sobre-mim" class="sobre-mim fade-in">
-        <h1 class="titulo-sobre" data-i18n="title_about">Sobre Mim</h1>
-        <p data-i18n="about_paragraph">Com 19 anos, sou estudante de <span>Ciência da Computação</span> no terceiro período, dedicado ao desenvolvimento de software e ao aprimoramento técnico contínuo. <br><br>
 
-        Formado como <span>técnico em Informática para Internet</span> pelo SENAI CIMATEC, onde conquistei uma bolsa de estudos, fortalecendo minha disciplina e senso de responsabilidade. <br><br>
+    <!-- SOBRE MIM -->
+    <section id="sobre-mim" class="section sobre-mim fade-in">
+        <div class="section-label">// 01</div>
+        <h2 class="section-title" data-i18n="title_about">Sobre Mim</h2>
+        <div class="sobre-grid">
+            <div class="sobre-text">
+                <p data-i18n="about_paragraph">Com 19 anos, sou estudante de <span>Ciência da Computação</span> no terceiro período, dedicado ao desenvolvimento de software e ao aprimoramento técnico contínuo. <br><br>
 
-        Minha paixão reside no desenvolvimento web e em soluções tecnológicas inovadoras, sempre priorizando boas práticas, código organizado e pensamento analítico para construir aplicações eficientes e escaláveis. <br><br>
+                Formado como <span>técnico em Informática para Internet</span> pelo SENAI CIMATEC, onde conquistei uma bolsa de estudos, fortalecendo minha disciplina e senso de responsabilidade. <br><br>
 
-        Busco oportunidades em Tecnologia da Informação para contribuir ativamente, aprender com experts e crescer profissionalmente, aplicando proatividade e dedicação em cada desafio.</p>
+                Minha paixão reside no desenvolvimento web e em soluções tecnológicas inovadoras, sempre priorizando boas práticas, código organizado e pensamento analítico para construir aplicações eficientes e escaláveis. <br><br>
+
+                Busco oportunidades em Tecnologia da Informação para contribuir ativamente, aprender com experts e crescer profissionalmente, aplicando proatividade e dedicação em cada desafio.</p>
+            </div>
+            <div class="sobre-stats">
+                <div class="stat-card">
+                    <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label" data-i18n="stat_semesters">Semestres em C.C.</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label" data-i18n="stat_technologies">Tecnologias</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="2">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label" data-i18n="stat_years">Anos de estudo</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="1">0</span><span class="stat-plus"></span>
+                    <span class="stat-label" data-i18n="stat_scholarship">Bolsa SENAI</span>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="projetos" class="section-projetos fade-in">
-        <h1 class="titulo-projetos" data-i18n="title_projects">Projetos</h1>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section section-projetos fade-in">
+        <div class="section-label">// 02</div>
+        <h2 class="section-title" data-i18n="title_projects">Projetos</h2>
         <div class="projetos-grid">
             <article class="project-card">
-                <img src="https://via.placeholder.com/400x250?text=Projeto+1" alt="Imagem do Projeto 1" class="project-image">
+                <div class="project-img-wrap">
+                    <img src="https://via.placeholder.com/400x250/0d0d0d/0bd400?text=Projeto+1" alt="Imagem do Projeto 1" class="project-image">
+                    <div class="project-overlay">
+                        <a href="#" class="overlay-link" target="_blank" rel="noopener noreferrer" data-i18n="project1_link"><i class="fab fa-github"></i> Ver Repositório</a>
+                    </div>
+                </div>
                 <div class="project-content">
-                    <h2 class="project-title" data-i18n="project1_title">Projeto 1</h2>
+                    <h3 class="project-title" data-i18n="project1_title">Projeto 1</h3>
                     <p class="project-description" data-i18n="project1_desc">Aplicação web desenvolvida para demonstrar habilidades em front-end e back-end, focando em usabilidade e performance.</p>
-                    <a href="#" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="project1_link"><i class="fab fa-github"></i> Ver Repositório</a>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
                 </div>
             </article>
             <article class="project-card">
-                <img src="https://via.placeholder.com/400x250?text=Projeto+2" alt="Imagem do Projeto 2" class="project-image">
+                <div class="project-img-wrap">
+                    <img src="https://via.placeholder.com/400x250/0d0d0d/0bd400?text=Projeto+2" alt="Imagem do Projeto 2" class="project-image">
+                    <div class="project-overlay">
+                        <a href="#" class="overlay-link" target="_blank" rel="noopener noreferrer" data-i18n="project2_link"><i class="fab fa-github"></i> Ver Repositório</a>
+                    </div>
+                </div>
                 <div class="project-content">
-                    <h2 class="project-title" data-i18n="project2_title">Projeto 2</h2>
+                    <h3 class="project-title" data-i18n="project2_title">Projeto 2</h3>
                     <p class="project-description" data-i18n="project2_desc">Sistema responsivo criado com tecnologias modernas, enfatizando design intuitivo e integração de APIs.</p>
-                    <a href="#" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="project2_link"><i class="fab fa-github"></i> Ver Repositório</a>
+                    <div class="project-tags">
+                        <span>React</span><span>Node.js</span><span>API</span>
+                    </div>
                 </div>
             </article>
             <article class="project-card">
-                <img src="https://via.placeholder.com/400x250?text=Projeto+3" alt="Imagem do Projeto 3" class="project-image">
+                <div class="project-img-wrap">
+                    <img src="https://via.placeholder.com/400x250/0d0d0d/0bd400?text=Projeto+3" alt="Imagem do Projeto 3" class="project-image">
+                    <div class="project-overlay">
+                        <a href="#" class="overlay-link" target="_blank" rel="noopener noreferrer" data-i18n="project3_link"><i class="fab fa-github"></i> Ver Repositório</a>
+                    </div>
+                </div>
                 <div class="project-content">
-                    <h2 class="project-title" data-i18n="project3_title">Projeto 3</h2>
+                    <h3 class="project-title" data-i18n="project3_title">Projeto 3</h3>
                     <p class="project-description" data-i18n="project3_desc">Projeto pessoal que explora novas ferramentas e frameworks, visando inovação e aprendizado contínuo.</p>
-                    <a href="#" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="project3_link"><i class="fab fa-github"></i> Ver Repositório</a>
+                    <div class="project-tags">
+                        <span>Git</span><span>SQL</span><span>CSS</span>
+                    </div>
                 </div>
             </article>
         </div>
     </section>
-    <section id="habilidades" class="section-habilidades fade-in">
-        <h1 class="titulo-habilidades" data-i18n="title_skills">Habilidades</h1>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section section-habilidades fade-in">
+        <div class="section-label">// 03</div>
+        <h2 class="section-title" data-i18n="title_skills">Habilidades</h2>
         <div class="habilidades-grid">
-            <div class="habilidade-card">
-                <i class="fab fa-html5"></i>
-                <h3>HTML & CSS</h3>
-                <p data-i18n="skill_html_desc">Criação de layouts responsivos e estilização moderna com foco em acessibilidade.</p>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-icon"><i class="fab fa-html5"></i></span>
+                    <span class="skill-name">HTML & CSS</span>
+                    <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                <p class="skill-desc" data-i18n="skill_html_desc">Criação de layouts responsivos e estilização moderna com foco em acessibilidade.</p>
             </div>
-            <div class="habilidade-card">
-                <i class="fab fa-js-square"></i>
-                <h3>JavaScript</h3>
-                <p data-i18n="skill_js_desc">Desenvolvimento de funcionalidades interativas e manipulação eficiente do DOM.</p>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-icon"><i class="fab fa-js-square"></i></span>
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-pct">80%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                <p class="skill-desc" data-i18n="skill_js_desc">Desenvolvimento de funcionalidades interativas e manipulação eficiente do DOM.</p>
             </div>
-            <div class="habilidade-card">
-                <i class="fab fa-react"></i>
-                <h3>React</h3>
-                <p data-i18n="skill_react_desc">Construção de interfaces dinâmicas e componentes reutilizáveis.</p>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-icon"><i class="fab fa-react"></i></span>
+                    <span class="skill-name">React</span>
+                    <span class="skill-pct">70%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                <p class="skill-desc" data-i18n="skill_react_desc">Construção de interfaces dinâmicas e componentes reutilizáveis.</p>
             </div>
-            <div class="habilidade-card">
-                <i class="fab fa-node-js"></i>
-                <h3>Node.js</h3>
-                <p data-i18n="skill_node_desc">Desenvolvimento de aplicações backend e APIs robustas.</p>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-icon"><i class="fab fa-node-js"></i></span>
+                    <span class="skill-name">Node.js</span>
+                    <span class="skill-pct">65%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                <p class="skill-desc" data-i18n="skill_node_desc">Desenvolvimento de aplicações backend e APIs robustas.</p>
             </div>
-            <div class="habilidade-card">
-                <i class="fab fa-git-alt"></i>
-                <h3>Git</h3>
-                <p data-i18n="skill_git_desc">Controle de versão e colaboração eficaz em equipes.</p>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-icon"><i class="fab fa-git-alt"></i></span>
+                    <span class="skill-name">Git</span>
+                    <span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                <p class="skill-desc" data-i18n="skill_git_desc">Controle de versão e colaboração eficaz em equipes.</p>
             </div>
-            <div class="habilidade-card">
-                <i class="fas fa-database"></i>
-                <h3>SQL</h3>
-                <p data-i18n="skill_sql_desc">Gerenciamento e otimização de bancos de dados relacionais.</p>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-icon"><i class="fas fa-database"></i></span>
+                    <span class="skill-name">SQL</span>
+                    <span class="skill-pct">65%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                <p class="skill-desc" data-i18n="skill_sql_desc">Gerenciamento e otimização de bancos de dados relacionais.</p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-icon"><i class="fab fa-python"></i></span>
+                    <span class="skill-name">Python</span>
+                    <span class="skill-pct">70%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                <p class="skill-desc" data-i18n="skill_python_desc">Desenvolvimento de scripts, automações e aplicações back-end.</p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-icon"><img src="assets/django.svg" class="skill-svg" alt="Django"></span>
+                    <span class="skill-name">Django</span>
+                    <span class="skill-pct">60%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+                <p class="skill-desc" data-i18n="skill_django_desc">Criação de aplicações web robustas com o framework Django.</p>
             </div>
         </div>
     </section>
-    <section id="contato" class="section-contato fade-in">
-        <h1 class="titulo-contato" data-i18n="title_contact">Contato</h1>
-        <div class="contato-content">
-            <p data-i18n="contact_intro">Interessado em oportunidades de colaboração? Vamos conversar!</p>
-            <div class="contato-info">
-                <p><i class="fas fa-envelope"></i> <strong data-i18n="contact_email_label">Email:</strong> seuemail@example.com</p>
-                <p><i class="fab fa-linkedin"></i> <strong data-i18n="contact_linkedin_label">LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/marcusvincius</a></p>
-                <p><i class="fab fa-github"></i> <strong data-i18n="contact_github_label">GitHub:</strong> <a href="#" target="_blank">github.com/marcusvincius</a></p>
-            </div>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section section-contato fade-in">
+        <div class="section-label">// 04</div>
+        <h2 class="section-title" data-i18n="title_contact">Contato</h2>
+        <p class="contato-intro" data-i18n="contact_intro">Interessado em oportunidades de colaboração? Vamos conversar!</p>
+        <div class="contato-cards">
+            <a href="mailto:marcusesc44@gmail.com" class="contato-card">
+                <i class="fas fa-envelope"></i>
+                <strong data-i18n="contact_email_label">Email</strong>
+                <span>marcusesc44@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/marcus-vinicius44" target="_blank" class="contato-card">
+                <i class="fab fa-linkedin"></i>
+                <strong data-i18n="contact_linkedin_label">LinkedIn</strong>
+                <span>linkedin.com/in/marcus-vinicius44</span>
+            </a>
+            <a href="https://github.com/MarcusVinicius44" target="_blank" class="contato-card">
+                <i class="fab fa-github"></i>
+                <strong data-i18n="contact_github_label">GitHub</strong>
+                <span>github.com/MarcusVinicius44</span>
+            </a>
         </div>
     </section>
-    <section id="certificados" class="section-certificados fade-in">
-        <h1 class="titulo-certificados" data-i18n="title_certificates">Certificados</h1>
+
+    <!-- CERTIFICADOS -->
+    <section id="certificados" class="section section-certificados fade-in">
+        <div class="section-label">// 05</div>
+        <h2 class="section-title" data-i18n="title_certificates">Certificados</h2>
         <div class="certificados-grid">
             <div class="certificado-card">
-                <i class="fas fa-certificate"></i>
-                <h3 data-i18n="certificate1_title">Técnico em Informática para Internet - SENAI CIMATEC</h3>
-                <p data-i18n="certificate1_desc">Formação técnica abrangente em desenvolvimento web e tecnologias digitais.</p>
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div class="cert-content">
+                    <h3 data-i18n="certificate1_title">Técnico em Informática para Internet - SENAI CIMATEC</h3>
+                    <p data-i18n="certificate1_desc">Formação técnica abrangente em desenvolvimento web e tecnologias digitais.</p>
+                </div>
             </div>
             <div class="certificado-card">
-                <i class="fas fa-certificate"></i>
-                <h3 data-i18n="certificate2_title">Certificado em JavaScript - Plataforma Online</h3>
-                <p data-i18n="certificate2_desc">Especialização avançada em JavaScript e desenvolvimento front-end.</p>
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div class="cert-content">
+                    <h3 data-i18n="certificate2_title">Certificado em JavaScript - Plataforma Online</h3>
+                    <p data-i18n="certificate2_desc">Especialização avançada em JavaScript e desenvolvimento front-end.</p>
+                </div>
             </div>
             <div class="certificado-card">
-                <i class="fas fa-certificate"></i>
-                <h3 data-i18n="certificate3_title">Certificado em React - Plataforma Online</h3>
-                <p data-i18n="certificate3_desc">Aprofundamento em React para criação de aplicações web modernas.</p>
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div class="cert-content">
+                    <h3 data-i18n="certificate3_title">Certificado em React - Plataforma Online</h3>
+                    <p data-i18n="certificate3_desc">Aprofundamento em React para criação de aplicações web modernas.</p>
+                </div>
             </div>
         </div>
     </section>
+
     <footer class="footer">
         <p data-i18n="footer_text">&copy; 2026 Marcus Vincius. Todos os direitos reservados.</p>
         <div class="social-links">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/MarcusVinicius44" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/marcus-vinicius44" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:marcusesc44@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
-    <script type="module" src="js/main.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

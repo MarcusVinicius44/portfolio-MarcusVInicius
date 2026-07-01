@@ -42,5 +42,11 @@
 "certificate2_desc": "Advanced specialization in JavaScript and front-end development.",
 "certificate3_title": "React Certificate - Online Platform",
 "certificate3_desc": "Deepening in React for building modern web applications.",
-"footer_text": "© 2026 Marcus Vincius. All rights reserved."
+"footer_text": "© 2026 Marcus Vincius. All rights reserved.",
+"skill_python_desc": "Development of scripts, automation, and back-end applications.",
+"skill_django_desc": "Building robust web applications with the Django framework.",
+"stat_semesters": "Semesters in C.S.",
+"stat_technologies": "Technologies",
+"stat_years": "Years of study",
+"stat_scholarship": "SENAI Scholarship"
 }
