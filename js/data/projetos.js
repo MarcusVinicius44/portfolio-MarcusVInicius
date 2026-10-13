@@ -57,7 +57,7 @@ const PROJETOS = [
         tags: ['Python', 'Django', 'JavaScript', 'React', 'Vite', 'Tailwind CSS', 'PostgreSQL', 'REST API'],
         repo: 'https://github.com/MarcusVinicius44/LauraComissao',
         demo: 'https://laura-comissao.vercel.app',
-        capa: null,
+        capa: 'assets/projetos/laura-comissao/logoLF.png',
         prints: [],
         videos: [],
         pt: {
