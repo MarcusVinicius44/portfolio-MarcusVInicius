@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════
+   CERTIFICADOS
+═══════════════════════════════════════ */
+.section-certificados { background: var(--bg-2); }
+
+.certificados-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.certificado-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 26px 30px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.certificado-card:hover {
+    background: var(--green-dim);
+    transform: translateX(8px);
+    box-shadow: 0 4px 20px rgba(11, 212, 0, 0.08);
+}
+
+.cert-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green-dim);
+    border-radius: 50%;
+    border: 1px solid var(--green-border);
+}
+
+.cert-icon i { font-size: 1.2rem; color: var(--green); }
+
+.cert-content h3 {
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.cert-content p {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.5;
+}

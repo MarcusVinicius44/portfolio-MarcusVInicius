@@ -1,0 +1,70 @@
+/* ═══════════════════════════════════════
+   SOBRE MIM
+═══════════════════════════════════════ */
+.sobre-mim { background: var(--bg-2); }
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.sobre-text p {
+    font-size: 0.97rem;
+    font-weight: 300;
+    line-height: 1.95;
+    color: #aaa;
+    text-align: justify;
+}
+
+.sobre-text p span {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.sobre-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--green-border);
+    border-radius: 14px;
+    padding: 26px 18px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(11, 212, 0, 0.12);
+}
+
+.stat-num {
+    display: inline;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--green);
+    line-height: 1;
+}
+
+.stat-plus {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.4rem;
+    color: var(--green);
+    vertical-align: super;
+    line-height: 0;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}

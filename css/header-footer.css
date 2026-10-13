@@ -1,0 +1,101 @@
+/* ═══════════════════════════════════════
+   HEADER
+═══════════════════════════════════════ */
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: rgba(5, 5, 5, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--green-border);
+    z-index: 1000;
+    transition: background 0.4s;
+}
+
+.logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: -0.5px;
+}
+.logo-bracket { color: var(--green); }
+
+i#burguer {
+    display: none;
+    font-size: 1.4rem;
+    color: var(--text);
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.navegacao-primaria {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.navegacao-primaria li a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    transition: color 0.3s;
+    letter-spacing: 0.5px;
+    margin-right: 25px;
+}
+
+.navegacao-primaria li a:hover { color: var(--green); }
+
+.language-toggle {
+    background: transparent;
+    border: 1px solid var(--green-border);
+    color: var(--green);
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    transition: all 0.3s;
+}
+
+.language-toggle:hover {
+    background: var(--green-dim);
+    box-shadow: 0 0 16px var(--green-glow);
+}
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+.footer {
+    background: var(--bg);
+    border-top: 1px solid var(--green-border);
+    padding: 28px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.social-links { display: flex; gap: 22px; }
+
+.social-links a {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--green);
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 8px var(--green));
+}

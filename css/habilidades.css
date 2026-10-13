@@ -1,0 +1,60 @@
+/* ═══════════════════════════════════════
+   HABILIDADES
+═══════════════════════════════════════ */
+.section-habilidades { background: var(--bg-2); }
+
+.habilidades-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.skill-group-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--green);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.skill-group-title::before { content: '// '; opacity: 0.6; }
+
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 18px;
+}
+
+.skill-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 26px 12px 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.skill-chip i {
+    font-size: 2.4rem;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.skill-chip span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text);
+}
+
+.skill-chip:hover {
+    transform: translateY(-5px);
+    border-color: var(--green-border);
+    background: var(--green-dim);
+    box-shadow: 0 8px 28px rgba(11, 212, 0, 0.12);
+}
+
+.skill-chip:hover i { color: var(--green); }

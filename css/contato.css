@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════
+   CONTATO
+═══════════════════════════════════════ */
+.section-contato { background: var(--bg); }
+
+.contato-intro {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    margin-top: -44px;
+    margin-bottom: 52px;
+}
+
+.contato-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.contato-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 40px 24px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    color: var(--text);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.contato-card:hover {
+    border-color: var(--green);
+    background: var(--green-dim);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(11, 212, 0, 0.12);
+}
+
+.contato-card i {
+    font-size: 2rem;
+    color: var(--green);
+}
+
+.contato-card strong {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.contato-card span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    word-break: break-all;
+}

@@ -1,0 +1,82 @@
+/* ═══════════════════════════════════════
+   RESPONSIVO
+═══════════════════════════════════════ */
+@media (max-width: 1100px) {
+    .hero { padding: 0 40px; }
+    .section { padding: 90px 40px; }
+    .footer { padding: 28px 40px; }
+    .sobre-grid { gap: 50px; }
+}
+
+@media (max-width: 1000px) {
+    .projetos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .header { padding: 0 20px; }
+
+    i#burguer { display: block; }
+
+    .navegacao-primaria {
+        display: none;
+        position: fixed;
+        top: var(--header-h);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        background: rgba(5, 5, 5, 0.98);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-bottom: 1px solid var(--green-border);
+        padding: 8px 20px 16px;
+        max-height: calc(100vh - var(--header-h));
+        overflow-y: auto;
+    }
+
+    .navegacao-primaria.active { display: flex; }
+
+    .navegacao-primaria li a {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        padding: 14px 0;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .hero {
+        padding: 30px 24px;
+        text-align: center;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-image-area { order: -1; }
+    .image-container { width: 220px; height: 220px; }
+    .floating-badge { display: none; }
+    .hero-cta { justify-content: center; }
+    .hero-paragraph { max-width: 100%; }
+
+    .section { padding: 70px 20px; }
+
+    .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+    .sobre-mim p { padding: 20px; font-size: 0.9rem; }
+    .projetos-grid { grid-template-columns: 1fr; }
+    .projetos-filtros { margin-top: -20px; }
+    .skill-list { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 12px; }
+    .contato-cards { grid-template-columns: 1fr; }
+
+    .footer {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+        padding: 28px 20px;
+    }
+
+    .certificado-card { flex-direction: column; text-align: center; }
+}
