@@ -55,7 +55,9 @@ function projectCard(p) {
                     <div class="project-tags">${tags}</div>
                     <div class="project-links">
                         <a href="${projectUrl(p)}" class="project-more">${escapeHtml(t('project_details', 'Ver detalhes'))} →</a>
-                        <a href="${escapeHtml(p.repo)}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+                        ${p.repo
+                            ? `<a href="${escapeHtml(p.repo)}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>`
+                            : `<span class="repo-privado" title="${escapeHtml(t('project_private', 'Repositório privado'))}"><i class="fas fa-lock"></i></span>`}
                         ${site}
                     </div>
                 </div>
@@ -160,7 +162,9 @@ function renderProjectDetail() {
             <h1 class="projeto-titulo">${escapeHtml(p.nome)}</h1>
             <div class="projeto-acoes">
                 ${demo}
-                <a href="${escapeHtml(p.repo)}" target="_blank" rel="noopener noreferrer" class="btn-ghost"><i class="fab fa-github"></i> ${escapeHtml(t('project_repo', 'Repositório'))}</a>
+                ${p.repo
+                    ? `<a href="${escapeHtml(p.repo)}" target="_blank" rel="noopener noreferrer" class="btn-ghost"><i class="fab fa-github"></i> ${escapeHtml(t('project_repo', 'Repositório'))}</a>`
+                    : `<span class="btn-ghost repo-privado"><i class="fas fa-lock"></i> ${escapeHtml(t('project_private', 'Repositório privado'))}</span>`}
             </div>
             ${videos}
             ${gallery}
