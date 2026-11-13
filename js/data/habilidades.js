@@ -11,7 +11,7 @@ const HABILIDADES = [
             { nome: 'JavaScript' },
             { nome: 'TypeScript' },
             { nome: 'React' },
-            { nome: 'Next.js' }
+            { nome: 'Vite' }
         ]
     },
     {
@@ -20,18 +20,43 @@ const HABILIDADES = [
         itens: [
             { nome: 'Python' },
             { nome: 'Django' },
-            { nome: 'Flask' },
-            { nome: 'Node.js' }
+            { nome: 'Django REST Framework' },
+            { nome: 'Flask' }
         ]
     },
     {
-        titulo: 'skills_data_tools',
-        rotulo: 'Dados e ferramentas',
+        titulo: 'skills_databases',
+        rotulo: 'Bancos de dados',
         itens: [
-            { nome: 'PostgreSQL' },
             { nome: 'MySQL' },
+            { nome: 'PostgreSQL' },
+            { nome: 'SQLite' }
+        ]
+    },
+    {
+        titulo: 'skills_ai',
+        rotulo: 'IA generativa',
+        itens: [
+            { nome: 'Gemini API' },
+            { nome: 'Pydantic' },
+            { nome: 'Claude Code' }
+        ]
+    },
+    {
+        titulo: 'skills_tools',
+        rotulo: 'Ferramentas',
+        itens: [
             { nome: 'Git' },
-            { nome: 'GitHub' }
+            { nome: 'GitHub' },
+            { nome: 'Vercel' }
+        ]
+    },
+    {
+        titulo: 'skills_basics',
+        rotulo: 'Noções',
+        itens: [
+            { nome: 'Java' },
+            { nome: 'Flutter' }
         ]
     }
 ];

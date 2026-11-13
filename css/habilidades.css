@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════
    HABILIDADES
 ═══════════════════════════════════════ */
-.section-habilidades { background: var(--bg-2); }
+.section-habilidades { background: var(--bg); }
 
 .habilidades-lista {
     display: flex;

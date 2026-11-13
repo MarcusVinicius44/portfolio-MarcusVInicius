@@ -15,6 +15,7 @@
         <nav>
             <ul class="navegacao-primaria" id="menu-primario">
                 <li><a href="${home}#sobre-mim"><span data-i18n="nav_about">Sobre</span></a></li>
+                <li><a href="${home}#experiencia"><span data-i18n="nav_experience">Experiência</span></a></li>
                 <li><a href="${home}#projetos"><span data-i18n="nav_projects">Projetos</span></a></li>
                 <li><a href="${home}#habilidades"><span data-i18n="nav_skills">Habilidades</span></a></li>
                 <li><a href="${home}#contato"><span data-i18n="nav_contact">Contato</span></a></li>

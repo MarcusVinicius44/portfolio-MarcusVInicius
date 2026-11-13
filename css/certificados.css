@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════
    CERTIFICADOS
 ═══════════════════════════════════════ */
-.section-certificados { background: var(--bg-2); }
+.section-certificados { background: var(--bg); }
 
 .certificados-grid {
     display: flex;

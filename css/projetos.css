@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════
    PROJETOS — seção da home, listagem e página de detalhe
 ═══════════════════════════════════════ */
-.section-projetos { background: var(--bg); }
+.section-projetos { background: var(--bg-2); }
 
 .projetos-grid {
     display: grid;

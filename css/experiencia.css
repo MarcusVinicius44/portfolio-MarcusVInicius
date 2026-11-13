@@ -1,0 +1,70 @@
+/* ═══════════════════════════════════════
+   EXPERIÊNCIA
+═══════════════════════════════════════ */
+.section-experiencia { background: var(--bg); }
+
+.experiencia-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.experiencia-card {
+    padding: 26px 30px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 12px;
+}
+
+.experiencia-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-bottom: 12px;
+}
+
+.experiencia-topo h3 {
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.experiencia-topo h3 span { color: var(--green); font-weight: 500; }
+
+.experiencia-periodo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.experiencia-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.experiencia-card li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.experiencia-card li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+}
+
+.repo-privado { color: var(--text-muted); cursor: default; }
+
+@media (max-width: 600px) {
+    .experiencia-card { padding: 22px 20px; }
+}

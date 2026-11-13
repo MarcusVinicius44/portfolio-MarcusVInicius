@@ -1,7 +1,7 @@
 // Efeito de digitação do hero (só roda na home, onde #typing-text existe)
 const TYPING_ROLES = {
-    pt: ['Desenvolvedor Web', 'Full Stack Developer', 'Estudante de C.C.'],
-    en: ['Web Developer', 'Full Stack Developer', 'C.S. Student']
+    pt: ['Desenvolvedor Full Stack', 'IA Generativa', 'Estudante de C.C.'],
+    en: ['Full Stack Developer', 'Generative AI', 'C.S. Student']
 };
 
 let typingTimer = null;
