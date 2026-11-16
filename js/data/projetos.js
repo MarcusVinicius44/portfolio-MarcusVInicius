@@ -72,47 +72,6 @@ const PROJETOS = [
         }
     },
     {
-        id: 'lanche-coletivo',
-        nome: 'Lanche Coletivo',
-        destaque: true,
-        tags: ['TypeScript', 'React', 'Vite', 'Tailwind CSS', 'Firebase'],
-        repo: 'https://github.com/MarcusVinicius44/GDG-LancheColetivo',
-        demo: 'https://gdg-lanche-coletivo.web.app',
-        capa: 'assets/projetos/lanche-coletivo/capa.png',
-        prints: [],
-        videos: ['assets/projetos/lanche-coletivo/demo.mp4'],
-        pt: {
-            resumo: 'App usado nos eventos do GDG Aracaju para organizar o coffee break feito por todos: cada pessoa escolhe o que leva e vê em tempo real o que ainda falta, sem planilha nem grupo de WhatsApp.',
-            descricao: [
-                'O Lanche Coletivo substitui as listas soltas e as mensagens perdidas do coffee break dos eventos do GDG Aracaju. A pessoa entra com a conta Google, escolhe um item, a quantidade e o sabor, e acompanha ao vivo o que ainda falta. Teve o primeiro uso no Coding Jam de Halloween, em 31/10/2026.',
-                'O desafio central era a concorrência: várias pessoas disputando a última unidade ao mesmo tempo, sem servidor próprio e sem custo fixo. O app roda no navegador e fala direto com o Firestore. A regra de negócio fica nas Security Rules, que impedem estourar a meta, burlar contadores ou mexer na contribuição de outra pessoa, e cada regra tem teste contra o emulador do Firebase.'
-            ],
-            funcionalidades: [
-                'Login com Google e atualização em tempo real do que falta levar',
-                'Contribuições com transações e revalidação nas Security Rules, com testes de disputa pela última unidade',
-                'Limites por pessoa e por sabor, prazo e regras diferentes depois do prazo',
-                'Painel da organização: eventos a partir de template, itens editáveis, painel de lacunas e exportação para WhatsApp e CSV',
-                'Detecção de navegador embutido (WhatsApp/Instagram) e layout pensado para o celular',
-                'Testes de segurança contra o emulador (Vitest) e lógica de domínio pura testada à parte'
-            ]
-        },
-        en: {
-            resumo: 'App used at GDG Aracaju events to organize the community-made coffee break: each person picks what to bring and sees in real time what is still missing, with no spreadsheet or messy WhatsApp group.',
-            descricao: [
-                'Lanche Coletivo replaces the loose lists and lost messages of the GDG Aracaju events’ coffee break. People sign in with Google, pick an item, a quantity and a flavor, and follow live what is still missing. It was first used at the Halloween Coding Jam on 10/31/2026.',
-                'The core challenge was concurrency: many people competing for the last unit at the same time, with no server of its own and no fixed cost. The app runs in the browser and talks straight to Firestore. The business rules live in the Security Rules, which prevent exceeding the target, tampering with counters or touching someone else’s contribution, and every rule is tested against the Firebase emulator.'
-            ],
-            funcionalidades: [
-                'Google sign-in and real-time update of what is still missing',
-                'Contributions using transactions and revalidation in the Security Rules, with tests for the race to the last unit',
-                'Per-person and per-flavor limits, a deadline and different rules after it',
-                'Organizer panel: events from templates, editable items, gap panel and export to WhatsApp and CSV',
-                'In-app browser detection (WhatsApp/Instagram) and a mobile-first layout',
-                'Security tests against the emulator (Vitest) and pure domain logic tested separately'
-            ]
-        }
-    },
-    {
         id: 'mentormatch',
         nome: 'DevFest Mentor Match',
         destaque: true,
@@ -150,6 +109,47 @@ const PROJETOS = [
                 'Coffee invitations, with accept or decline',
                 'Real-time chat between people who accepted, with contact info revealed only then',
                 'Firestore security rules and deployment on Firebase App Hosting'
+            ]
+        }
+    },
+    {
+        id: 'lanche-coletivo',
+        nome: 'Lanche Coletivo',
+        destaque: true,
+        tags: ['TypeScript', 'React', 'Vite', 'Tailwind CSS', 'Firebase'],
+        repo: 'https://github.com/MarcusVinicius44/GDG-LancheColetivo',
+        demo: 'https://gdg-lanche-coletivo.web.app',
+        capa: 'assets/projetos/lanche-coletivo/capa.png',
+        prints: [],
+        videos: ['assets/projetos/lanche-coletivo/demo.mp4'],
+        pt: {
+            resumo: 'App usado nos eventos do GDG Aracaju para organizar o coffee break feito por todos: cada pessoa escolhe o que leva e vê em tempo real o que ainda falta, sem planilha nem grupo de WhatsApp.',
+            descricao: [
+                'O Lanche Coletivo substitui as listas soltas e as mensagens perdidas do coffee break dos eventos do GDG Aracaju. A pessoa entra com a conta Google, escolhe um item, a quantidade e o sabor, e acompanha ao vivo o que ainda falta. Teve o primeiro uso no Coding Jam de Halloween, em 31/10/2026.',
+                'O desafio central era a concorrência: várias pessoas disputando a última unidade ao mesmo tempo, sem servidor próprio e sem custo fixo. O app roda no navegador e fala direto com o Firestore. A regra de negócio fica nas Security Rules, que impedem estourar a meta, burlar contadores ou mexer na contribuição de outra pessoa, e cada regra tem teste contra o emulador do Firebase.'
+            ],
+            funcionalidades: [
+                'Login com Google e atualização em tempo real do que falta levar',
+                'Contribuições com transações e revalidação nas Security Rules, com testes de disputa pela última unidade',
+                'Limites por pessoa e por sabor, prazo e regras diferentes depois do prazo',
+                'Painel da organização: eventos a partir de template, itens editáveis, painel de lacunas e exportação para WhatsApp e CSV',
+                'Detecção de navegador embutido (WhatsApp/Instagram) e layout pensado para o celular',
+                'Testes de segurança contra o emulador (Vitest) e lógica de domínio pura testada à parte'
+            ]
+        },
+        en: {
+            resumo: 'App used at GDG Aracaju events to organize the community-made coffee break: each person picks what to bring and sees in real time what is still missing, with no spreadsheet or messy WhatsApp group.',
+            descricao: [
+                'Lanche Coletivo replaces the loose lists and lost messages of the GDG Aracaju events’ coffee break. People sign in with Google, pick an item, a quantity and a flavor, and follow live what is still missing. It was first used at the Halloween Coding Jam on 10/31/2026.',
+                'The core challenge was concurrency: many people competing for the last unit at the same time, with no server of its own and no fixed cost. The app runs in the browser and talks straight to Firestore. The business rules live in the Security Rules, which prevent exceeding the target, tampering with counters or touching someone else’s contribution, and every rule is tested against the Firebase emulator.'
+            ],
+            funcionalidades: [
+                'Google sign-in and real-time update of what is still missing',
+                'Contributions using transactions and revalidation in the Security Rules, with tests for the race to the last unit',
+                'Per-person and per-flavor limits, a deadline and different rules after it',
+                'Organizer panel: events from templates, editable items, gap panel and export to WhatsApp and CSV',
+                'In-app browser detection (WhatsApp/Instagram) and a mobile-first layout',
+                'Security tests against the emulator (Vitest) and pure domain logic tested separately'
             ]
         }
     },
