@@ -67,5 +67,13 @@
 "exp2_item1": "User support, computer maintenance and help with networks and internal systems.",
 "project_private": "Private repository",
 "project_in_progress": "In progress",
-"project_featured": "Featured"
+"project_featured": "Featured",
+"exp3_role": "Extension project",
+"exp3_place": "· Conscious use of AI",
+"exp3_item1": "Group class for 2nd-year high school students on the conscious use of AI and algorithmic hallucinations. I was responsible for the activities and for explaining hallucination.",
+"certificate5_title": "Python Master - PyCodeBr",
+"certificate5_desc": "Course in progress.",
+"skill_structured": "Structured output (JSON)",
+"skill_prompt": "Prompt engineering",
+"skill_eval": "Evaluation against an answer key"
 }

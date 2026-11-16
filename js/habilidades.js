@@ -7,7 +7,7 @@ function renderSkills() {
             <div class="skill-group">
                 <h3 class="skill-group-title" data-i18n="${grupo.titulo}">${t(grupo.titulo, grupo.rotulo)}</h3>
                 <ul class="skill-list">
-                    ${grupo.itens.map(s => `<li class="skill-chip"><i class="${techIcon(s.nome)}" aria-hidden="true"></i><span>${s.nome}</span></li>`).join('')}
+                    ${grupo.itens.map(s => `<li class="skill-chip"><i class="${techIcon(s.nome)}" aria-hidden="true"></i><span${s.chave ? ` data-i18n="${s.chave}"` : ''}>${s.chave ? t(s.chave, s.nome) : s.nome}</span></li>`).join('')}
                 </ul>
             </div>`).join('');
 

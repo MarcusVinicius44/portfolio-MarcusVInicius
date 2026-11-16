@@ -38,7 +38,11 @@ const HABILIDADES = [
         rotulo: 'IA generativa',
         itens: [
             { nome: 'Gemini API' },
+            { nome: 'Groq' },
             { nome: 'Pydantic' },
+            { nome: 'Saída estruturada (JSON)', chave: 'skill_structured' },
+            { nome: 'Engenharia de prompt', chave: 'skill_prompt' },
+            { nome: 'Avaliação com gabarito', chave: 'skill_eval' },
             { nome: 'Claude Code' }
         ]
     },

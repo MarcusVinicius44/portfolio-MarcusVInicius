@@ -43,7 +43,10 @@ const TECNOLOGIAS = {
     'Java': 'devicon-java-plain',
     'Spring Boot': 'devicon-spring-original',
     'GameMaker': 'fas fa-gamepad',
-    'REST API': 'fas fa-plug'
+    'REST API': 'fas fa-plug',
+    'Saída estruturada (JSON)': 'fas fa-code',
+    'Engenharia de prompt': 'fas fa-terminal',
+    'Avaliação com gabarito': 'fas fa-clipboard-check'
 };
 
 function techIcon(nome) {
