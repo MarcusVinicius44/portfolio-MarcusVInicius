@@ -168,7 +168,7 @@ const PROJETOS = [
             resumo: 'Plataforma em desenvolvimento que conecta empreendedores a profissionais com mais de 50 anos de experiência, para sessões de mentoria agendadas e pagas pelo próprio site.',
             descricao: [
                 'O Sábios conecta donos de pequenos negócios a profissionais experientes, com mais de 50 anos, que já passaram pelos mesmos desafios. O empreendedor busca pelo problema que quer resolver (fluxo de caixa, vendas, liderança), conhece o especialista, escolhe um horário e agenda uma conversa por vídeo. Quem tem experiência também pode se cadastrar como mentor e definir seus horários e valores.',
-                'O projeto está em desenvolvimento por uma equipe de 3 pessoas, com React, Vite e Tailwind CSS no front-end. Como boa parte do público é mais velha, a acessibilidade é prioridade: fiz um painel com texto maior, alto contraste, modo simples e leitura da página em voz alta. Também configurei as rotas e fiz o layout principal, a página inicial e o perfil do especialista com o cartão de agendamento. Por enquanto os dados são de exemplo, enquanto a API é construída, e o repositório é privado.'
+                'O projeto está em desenvolvimento por uma equipe de 3 pessoas, com React, Vite e Tailwind CSS no front-end. Como boa parte do público é mais velha, a acessibilidade é prioridade: o site tem um painel com texto maior, alto contraste, modo simples e leitura da página em voz alta. Por enquanto os dados são de exemplo, enquanto a API é construída, e o repositório é privado.'
             ],
             funcionalidades: [
                 'Página inicial com busca por desafio, como funciona, especialistas em destaque e chamada para mentores',
@@ -183,7 +183,7 @@ const PROJETOS = [
             resumo: 'Platform under development that connects entrepreneurs with professionals over 50, for mentoring sessions booked and paid through the site.',
             descricao: [
                 'Sábios connects small business owners with experienced professionals over 50 who have already faced the same challenges. The entrepreneur searches for the problem they want to solve (cash flow, sales, leadership), meets the expert, picks a time slot and books a video call. Experienced people can also sign up as mentors and set their own hours and prices.',
-                'The project is being built by a team of 3, with React, Vite and Tailwind CSS on the front-end. Since much of the audience is older, accessibility is a priority: I built a panel with larger text, high contrast, a simple mode and reading the page aloud. I also set up the routes and built the main layout, the home page and the expert profile with the booking card. For now the data is sample data while the API is being built, and the repository is private.'
+                'The project is being built by a team of 3, with React, Vite and Tailwind CSS on the front-end. Since much of the audience is older, accessibility is a priority: the site has a panel with larger text, high contrast, a simple mode and reading the page aloud. For now the data is sample data while the API is being built, and the repository is private.'
             ],
             funcionalidades: [
                 'Home page with search by challenge, how it works, featured experts and a call for mentors',
