@@ -1,0 +1,236 @@
+/* ═══════════════════════════════════════
+   EFEITOS (js/efeitos.js)
+   Tudo que depende de movimento fica sob html.fx, que só é ligado
+   quando o sistema não pede movimento reduzido.
+═══════════════════════════════════════ */
+
+/* ── Rede neural do hero ── */
+.hero-neural {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.85;
+    /* mais fraca atrás do texto, mais forte nas bordas e atrás da foto */
+    -webkit-mask-image: radial-gradient(ellipse 120% 100% at 70% 50%, #000 35%, rgba(0,0,0,0.35) 100%);
+    mask-image: radial-gradient(ellipse 120% 100% at 70% 50%, #000 35%, rgba(0,0,0,0.35) 100%);
+}
+
+/* holofote que segue o mouse sobre a grade */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(420px circle at var(--mx, 70%) var(--my, 40%), rgba(11, 212, 0, 0.09), transparent 70%);
+    transition: background 0.1s;
+}
+
+.hero-onda {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    box-shadow: 0 0 24px var(--green-glow);
+    pointer-events: none;
+    animation: fxOnda 0.9s ease-out forwards;
+}
+
+@keyframes fxOnda {
+    from { transform: scale(0.2); opacity: 1; }
+    to   { transform: scale(18); opacity: 0; }
+}
+
+.hero { cursor: crosshair; }
+.hero a, .hero button { cursor: pointer; }
+
+/* ── Entrada do hero ── */
+.fx .hero-text > * { animation: fxSobe 0.8s cubic-bezier(.2,.7,.2,1) both; }
+.fx .hero-text > :nth-child(1) { animation-delay: 0.10s; }
+.fx .hero-text > :nth-child(2) { animation-delay: 0.20s; }
+.fx .hero-text > :nth-child(3) { animation-delay: 0.45s; }
+.fx .hero-text > :nth-child(4) { animation-delay: 0.60s; }
+.fx .hero-text > :nth-child(5) { animation-delay: 0.75s; }
+
+.fx .image-container { animation: fxSurge 1.1s cubic-bezier(.2,.7,.2,1) 0.3s both; }
+.fx .hero-image-area .floating-badge { animation: fxBadge 0.6s cubic-bezier(.3,1.6,.5,1) both, float 3s ease-in-out infinite; }
+.fx .badge-1 { animation-delay: 0.9s, 0s; }
+.fx .badge-2 { animation-delay: 1.0s, 0.6s; }
+.fx .badge-3 { animation-delay: 1.1s, 1.2s; }
+.fx .badge-4 { animation-delay: 1.2s, 1.8s; }
+.fx .badge-5 { animation-delay: 1.3s, 2.4s; }
+.fx .badge-6 { animation-delay: 1.4s, 3s; }
+
+/* nome: entra em foco, com as letras se aproximando */
+.fx .hero-text > .hero-name { animation: fxFoco 1.4s cubic-bezier(.2,.7,.2,1) 0.15s both; }
+@keyframes fxFoco {
+    from { opacity: 0; letter-spacing: 14px; filter: blur(14px); }
+    60%  { opacity: 1; }
+    to   { opacity: 1; letter-spacing: -2px; filter: blur(0); }
+}
+
+@keyframes fxSobe {
+    from { opacity: 0; transform: translateY(28px); filter: blur(6px); }
+    to   { opacity: 1; transform: none; filter: none; }
+}
+
+@keyframes fxSurge {
+    from { opacity: 0; transform: scale(0.7) rotate(-8deg); filter: blur(10px); }
+    to   { opacity: 1; transform: none; filter: none; }
+}
+
+@keyframes fxBadge {
+    from { opacity: 0; scale: 0.4; }
+    to   { opacity: 1; scale: 1; }
+}
+
+/* foto e selos com profundidade (mouse) */
+.hero-image-area { --px: 0; --py: 0; }
+.hero-image-area .image-container {
+    translate: calc(var(--px) * 18px) calc(var(--py) * 18px);
+    transition: translate 0.4s ease-out;
+}
+.hero-image-area .floating-badge {
+    translate: calc(var(--px) * -36px) calc(var(--py) * -36px);
+    transition: translate 0.5s ease-out, border-color 0.3s;
+}
+.hero-image-area .badge-2, .hero-image-area .badge-4, .hero-image-area .badge-6 {
+    translate: calc(var(--px) * 46px) calc(var(--py) * 46px);
+}
+
+/* foto "respira" com um brilho pulsante */
+.fx .foto-marcus { animation: fxRespira 4s ease-in-out infinite; }
+@keyframes fxRespira {
+    0%, 100% { box-shadow: 0 0 0 1px var(--green-border), 0 0 40px rgba(11,212,0,0.18), 0 0 80px rgba(11,212,0,0.08); }
+    50%      { box-shadow: 0 0 0 1px var(--green), 0 0 60px rgba(11,212,0,0.32), 0 0 120px rgba(11,212,0,0.14); }
+}
+
+/* ── Seções ── */
+.fx-letra {
+    display: inline-block;
+    animation: fxLetra 0.55s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes fxLetra {
+    from { opacity: 0; transform: translateY(0.45em); filter: blur(6px); }
+    to   { opacity: 1; transform: none; filter: none; }
+}
+
+.fx .fade-in .section-title::after {
+    width: 0;
+    transition: width 0.9s cubic-bezier(.2,.7,.2,1) 0.35s;
+}
+.fx .fade-in.visible .section-title::after { width: 48px; }
+
+.fx .fade-in .fx-item {
+    opacity: 0;
+    translate: 0 26px;
+    filter: blur(4px);
+    transition: opacity 0.6s ease, translate 0.6s cubic-bezier(.2,.7,.2,1), filter 0.6s ease;
+    transition-delay: calc(0.15s + var(--i, 0) * 0.07s);
+}
+.fx .fade-in.visible .fx-item {
+    opacity: 1;
+    translate: 0 0;
+    filter: none;
+}
+
+/* ── Cards: inclinação 3D + brilho que segue o cursor ── */
+.fx-glow { position: relative; isolation: isolate; }
+
+.fx-glow::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background:
+        radial-gradient(260px circle at var(--gx, 50%) var(--gy, 50%), rgba(11, 212, 0, 0.13), transparent 65%);
+    /* borda iluminada perto do cursor */
+    box-shadow: inset 0 0 0 1px rgba(11, 212, 0, 0.0);
+}
+.fx-glow.fx-tilting::after { opacity: 1; }
+
+.fx-glow.fx-tilting {
+    transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-6px);
+    transition: transform 0.12s ease-out, border-color 0.3s, box-shadow 0.3s;
+    border-color: var(--green-border);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55), 0 0 30px rgba(11, 212, 0, 0.10);
+}
+.experiencia-card.fx-tilting { border-left-color: var(--green); }
+.fx-glow:not(.fx-tilting) { transition: transform 0.5s cubic-bezier(.2,.7,.2,1), border-color 0.3s, box-shadow 0.3s; }
+
+/* ── Botões magnéticos ── */
+.btn-primary, .btn-ghost, .social-links a { translate: 0 0; transition: all 0.3s, translate 0.35s cubic-bezier(.2,.7,.2,1); }
+.fx-magnet { translate: var(--tx, 0) var(--ty, 0); transition: all 0.3s, translate 0.1s ease-out; }
+
+/* brilho que atravessa o botão principal */
+.fx .btn-primary { position: relative; overflow: hidden; }
+.fx .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,0.55), transparent);
+    transform: skewX(-20deg);
+    animation: fxBrilho 3.5s ease-in-out 2s infinite;
+    pointer-events: none;
+}
+@keyframes fxBrilho {
+    0%, 70% { left: -60%; }
+    100%    { left: 130%; }
+}
+
+/* ── Barra de progresso ── */
+.fx-progresso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 2000;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    background: linear-gradient(90deg, rgba(11,212,0,0.4), var(--green));
+    box-shadow: 0 0 10px var(--green-glow);
+    pointer-events: none;
+}
+
+/* ── Brilho do cursor ── */
+.fx-cursor-glow {
+    position: fixed;
+    top: -300px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(circle, rgba(11, 212, 0, 0.06), transparent 60%);
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+.fx-cursor-glow.on { opacity: 1; }
+
+/* ── Detalhes ── */
+.fx .skill-chip:hover i { animation: fxPop 0.5s cubic-bezier(.3,1.8,.5,1); }
+@keyframes fxPop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.35) rotate(-8deg); }
+    100% { transform: scale(1); }
+}
+
+.fx .cert-icon i, .fx .contato-card i { transition: transform 0.4s cubic-bezier(.3,1.6,.5,1); }
+.fx .certificado-card:hover .cert-icon i { transform: rotate(-12deg) scale(1.15); }
+.fx .contato-card:hover i { transform: translateY(-4px) scale(1.15); }
+
+@media (prefers-reduced-motion: reduce) {
+    .hero::before, .fx-cursor-glow, .hero-onda { display: none; }
+    .hero { cursor: auto; }
+}

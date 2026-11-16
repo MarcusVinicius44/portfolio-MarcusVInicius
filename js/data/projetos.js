@@ -4,12 +4,16 @@
    id            slug usado na URL (projeto.html?id=<id>)
    destaque      true = aparece na home (recomendado: 3 projetos)
    tags          tecnologias/linguagens, com ícone (nomes em data/tecnologias.js) — também viram os filtros
+   emDesenvolvimento  true = mostra o selo "Em desenvolvimento" (opcional)
+   emDestaque    true = mostra o selo "Em destaque" (opcional)
    repo / demo   links (demo pode ser null)
    capa          imagem de capa do card (qualquer proporção: é ajustada sem cortar), ex.: 'assets/projetos/cleangit/capa.png'
                  — null usa uma capa gerada com o nome do projeto
    prints        capturas de tela (aparecem no topo da página do projeto), ex.: ['assets/projetos/cleangit/print1.png']
    videos        gravações (aparecem no topo da página do projeto): arquivo local ('assets/projetos/cleangit/demo.mp4')
                  ou link do YouTube ('https://www.youtube.com/watch?v=XXXX')
+                 ou de uma publicação pública do LinkedIn (link do post ou do "Incorporar esta publicação");
+                 se o post do LinkedIn ficar cortado, use { src: '<link>', altura: 650 } (altura em px; padrão 560)
    Coloque os arquivos em assets/projetos/<id>/ (a pasta de cada projeto já existe).
    pt / en       textos: resumo (card), descricao (parágrafos), funcionalidades (lista) */
 const PROJETOS = [
@@ -17,11 +21,20 @@ const PROJETOS = [
         id: 'lucrafood',
         nome: 'LucraFood',
         destaque: true,
+        emDestaque: true,
         tags: ['Python', 'Django', 'REST API', 'React', 'TypeScript', 'Vite', 'Gemini API', 'Pydantic'],
         repo: 'https://github.com/MarcusVinicius44/LucraFood',
         demo: 'https://lucrafood.vercel.app',
         capa: 'assets/projetos/lucrafood/capa.png',
-        prints: [],
+        prints: [
+            'assets/projetos/lucrafood/landing.png',
+            'assets/projetos/lucrafood/demo-1-cardapio.png',
+            'assets/projetos/lucrafood/demo-2-revisao-ia.png',
+            'assets/projetos/lucrafood/demo-3-painel.png',
+            'assets/projetos/lucrafood/demo-4-receita.png',
+            'assets/projetos/lucrafood/demo-5-resultado.png',
+            'assets/projetos/lucrafood/por-dentro.png'
+        ],
         videos: [],
         pt: {
             resumo: 'Plataforma com IA generativa para pequenos restaurantes: tire uma foto do cardápio e descubra quais pratos dão lucro e quais dão prejuízo no delivery.',
@@ -67,7 +80,7 @@ const PROJETOS = [
         demo: 'https://gdg-lanche-coletivo.web.app',
         capa: 'assets/projetos/lanche-coletivo/capa.png',
         prints: [],
-        videos: [],
+        videos: ['assets/projetos/lanche-coletivo/demo.mp4'],
         pt: {
             resumo: 'App usado nos eventos do GDG Aracaju para organizar o coffee break feito por todos: cada pessoa escolhe o que leva e vê em tempo real o que ainda falta, sem planilha nem grupo de WhatsApp.',
             descricao: [
@@ -108,7 +121,7 @@ const PROJETOS = [
         demo: 'https://mentormatchgdg.web.app',
         capa: 'assets/projetos/mentormatch/capa.png',
         prints: [],
-        videos: [],
+        videos: ['https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7523479905179934720?collapsed=1'],
         pt: {
             resumo: 'App que conecta quem está começando com devs experientes no mesmo evento para um café de 15 minutos, com a IA do Gemini explicando por que cada par combina.',
             descricao: [
@@ -137,6 +150,48 @@ const PROJETOS = [
                 'Coffee invitations, with accept or decline',
                 'Real-time chat between people who accepted, with contact info revealed only then',
                 'Firestore security rules and deployment on Firebase App Hosting'
+            ]
+        }
+    },
+    {
+        id: 'sabios',
+        nome: 'Sábios',
+        destaque: false,
+        emDesenvolvimento: true,
+        tags: ['JavaScript', 'React', 'Vite', 'Tailwind CSS'],
+        repo: null,
+        demo: null,
+        capa: 'assets/projetos/sabios/capa.png',
+        prints: ['assets/projetos/sabios/home.png', 'assets/projetos/sabios/perfil-especialista.png'],
+        videos: [],
+        pt: {
+            resumo: 'Plataforma em desenvolvimento que conecta empreendedores a profissionais com mais de 50 anos de experiência, para sessões de mentoria agendadas e pagas pelo próprio site.',
+            descricao: [
+                'O Sábios conecta donos de pequenos negócios a profissionais experientes, com mais de 50 anos, que já passaram pelos mesmos desafios. O empreendedor busca pelo problema que quer resolver (fluxo de caixa, vendas, liderança), conhece o especialista, escolhe um horário e agenda uma conversa por vídeo. Quem tem experiência também pode se cadastrar como mentor e definir seus horários e valores.',
+                'O projeto está em desenvolvimento por uma equipe de 3 pessoas, com React, Vite e Tailwind CSS no front-end. Como boa parte do público é mais velha, a acessibilidade é prioridade: fiz um painel com texto maior, alto contraste, modo simples e leitura da página em voz alta. Também configurei as rotas e fiz o layout principal, a página inicial e o perfil do especialista com o cartão de agendamento. Por enquanto os dados são de exemplo, enquanto a API é construída, e o repositório é privado.'
+            ],
+            funcionalidades: [
+                'Página inicial com busca por desafio, como funciona, especialistas em destaque e chamada para mentores',
+                'Perfil do especialista com trajetória, avaliações e cartão de agendamento (dia e horário)',
+                'Painel de acessibilidade: texto maior, alto contraste e modo simples',
+                'Leitura da página em voz alta com a voz do próprio navegador (Web Speech API)',
+                'Escolha de perfil no cadastro: cliente ou conselheiro',
+                'Rotas com React Router e componentes compartilhados'
+            ]
+        },
+        en: {
+            resumo: 'Platform under development that connects entrepreneurs with professionals over 50, for mentoring sessions booked and paid through the site.',
+            descricao: [
+                'Sábios connects small business owners with experienced professionals over 50 who have already faced the same challenges. The entrepreneur searches for the problem they want to solve (cash flow, sales, leadership), meets the expert, picks a time slot and books a video call. Experienced people can also sign up as mentors and set their own hours and prices.',
+                'The project is being built by a team of 3, with React, Vite and Tailwind CSS on the front-end. Since much of the audience is older, accessibility is a priority: I built a panel with larger text, high contrast, a simple mode and reading the page aloud. I also set up the routes and built the main layout, the home page and the expert profile with the booking card. For now the data is sample data while the API is being built, and the repository is private.'
+            ],
+            funcionalidades: [
+                'Home page with search by challenge, how it works, featured experts and a call for mentors',
+                'Expert profile with career history, reviews and a booking card (day and time)',
+                'Accessibility panel: larger text, high contrast and simple mode',
+                'Reading the page aloud with the browser’s own voice (Web Speech API)',
+                'Profile choice at sign-up: client or mentor',
+                'Routing with React Router and shared components'
             ]
         }
     },
@@ -266,7 +321,7 @@ const PROJETOS = [
         demo: 'https://laura-comissao.vercel.app',
         capa: null,
         prints: [],
-        videos: [],
+        videos: ['https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7499100349937541120?collapsed=1'],
         pt: {
             resumo: 'Sistema de gestão para um salão de unhas: organiza a agenda, evita horários conflitantes, confirma atendimentos por e-mail e calcula a comissão da profissional.',
             descricao: [
@@ -346,7 +401,7 @@ const PROJETOS = [
         demo: 'https://vital-men-py.vercel.app',
         capa: 'assets/projetos/vitalmen/vital-logo.png',
         prints: [],
-        videos: [],
+        videos: [{ src: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7432740350655447040?collapsed=1', altura: 645 }],
         pt: {
             resumo: 'Aplicação web para incentivar o autocuidado e a conscientização sobre a saúde masculina, com conteúdos de saúde, acompanhamento de tarefas e comunidade.',
             descricao: [

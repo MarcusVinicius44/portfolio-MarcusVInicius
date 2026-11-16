@@ -1,5 +1,6 @@
 /* Ponto de entrada do CSS: cada página carrega só este arquivo.
-   A ordem importa — responsivo.css deve ficar por último. */
+   A ordem importa — responsivo.css deve ficar por último
+   (efeitos.css logo antes dele). */
 @import url('base.css');
 @import url('header-footer.css');
 @import url('hero.css');
@@ -9,4 +10,6 @@
 @import url('habilidades.css');
 @import url('contato.css');
 @import url('certificados.css');
+@import url('efeitos.css');
+@import url('visualizador.css');
 @import url('responsivo.css');

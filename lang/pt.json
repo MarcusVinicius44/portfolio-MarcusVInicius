@@ -64,5 +64,7 @@
 "exp2_role": "Técnico de Suporte em TI",
 "exp2_period": "01/2025 - 02/2026",
 "exp2_item1": "Suporte a usuários, manutenção de computadores e apoio em redes e sistemas internos.",
-"project_private": "Repositório privado"
+"project_private": "Repositório privado",
+"project_in_progress": "Em desenvolvimento",
+"project_featured": "Em destaque"
 }

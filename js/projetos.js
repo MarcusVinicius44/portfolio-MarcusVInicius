@@ -22,13 +22,33 @@ function projectCover(p) {
     return `<div class="project-cover" role="img" aria-label="${escapeHtml(p.nome)}">${escapeHtml(p.nome)}</div>`;
 }
 
-// Vídeo: YouTube vira iframe, qualquer outro caminho vira <video> local
-function videoEmbed(src) {
+// Vídeo: YouTube e LinkedIn viram iframe, qualquer outro caminho vira <video> local
+// Cada vídeo pode ser um link (texto) ou { src, altura } para ajustar a altura de um post do LinkedIn
+function videoEmbed(video) {
+    const src = typeof video === 'string' ? video : video.src;
     const yt = src.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/);
     if (yt) {
-        return `<iframe src="https://www.youtube-nocookie.com/embed/${yt[1]}" title="Vídeo do projeto" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>`;
+        return `<div class="projeto-video"><iframe src="https://www.youtube-nocookie.com/embed/${yt[1]}" title="Vídeo do projeto" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div>`;
     }
-    return `<video src="${escapeHtml(src)}" controls preload="metadata" playsinline></video>`;
+    // Publicação do LinkedIn: aceita o link do post ou o link de "Incorporar" (precisa ser pública)
+    const li = src.match(/linkedin\.com\/.*(urn:li:(?:ugcPost|share|activity):\d+)/);
+    if (li) {
+        const altura = Number(video.altura) > 0 ? ` style="height:${Number(video.altura)}px"` : '';
+        return `<div class="projeto-video projeto-video--linkedin"${altura}><iframe src="https://www.linkedin.com/embed/feed/update/${li[1]}?collapsed=1" title="Publicação do LinkedIn" allowfullscreen loading="lazy"></iframe></div>`;
+    }
+    return `<div class="projeto-video"><video src="${escapeHtml(src)}" controls preload="metadata" playsinline></video></div>`;
+}
+
+// Selos "Em destaque" e "Em desenvolvimento" (campos emDestaque / emDesenvolvimento em data/projetos.js)
+function statusBadge(p) {
+    const selos = [];
+    if (p.emDestaque) {
+        selos.push(`<span class="projeto-status projeto-status--destaque"><i class="fas fa-star" aria-hidden="true"></i>${escapeHtml(t('project_featured', 'Em destaque'))}</span>`);
+    }
+    if (p.emDesenvolvimento) {
+        selos.push(`<span class="projeto-status"><span class="projeto-status-ponto"></span>${escapeHtml(t('project_in_progress', 'Em desenvolvimento'))}</span>`);
+    }
+    return selos.length ? `<span class="projeto-selos">${selos.join('')}</span>` : '';
 }
 
 function techTag(tag) {
@@ -45,6 +65,7 @@ function projectCard(p) {
             <article class="project-card">
                 <a href="${projectUrl(p)}" class="project-img-wrap">
                     ${projectCover(p)}
+                    ${statusBadge(p)}
                     <div class="project-overlay">
                         <span class="overlay-link">${escapeHtml(t('project_details', 'Ver detalhes'))}</span>
                     </div>
@@ -147,19 +168,19 @@ function renderProjectDetail() {
     const videos = p.videos.length
         ? `<div class="projeto-bloco">
                 <h2>// ${escapeHtml(t('project_videos', 'Vídeos'))}</h2>
-                <div class="projeto-videos">${p.videos.map(src => `<div class="projeto-video">${videoEmbed(src)}</div>`).join('')}</div>
+                <div class="projeto-videos">${p.videos.map(videoEmbed).join('')}</div>
             </div>`
         : '';
     const gallery = p.prints.length
         ? `<div class="projeto-bloco">
                 <h2>// ${escapeHtml(t('project_gallery', 'Capturas de tela'))}</h2>
-                <div class="projeto-galeria">${p.prints.map(src => `<a href="${escapeHtml(src)}" target="_blank" rel="noopener noreferrer"><img src="${escapeHtml(src)}" alt="${escapeHtml(p.nome)}" loading="lazy"></a>`).join('')}</div>
+                <div class="projeto-galeria">${p.prints.map((src, i) => `<a href="${escapeHtml(src)}"><img src="${escapeHtml(src)}" alt="${escapeHtml(p.nome)} - ${i + 1}" loading="lazy"></a>`).join('')}</div>
             </div>`
         : '';
 
     el.innerHTML = `
             ${back}
-            <h1 class="projeto-titulo">${escapeHtml(p.nome)}</h1>
+            <h1 class="projeto-titulo">${escapeHtml(p.nome)} ${statusBadge(p)}</h1>
             <div class="projeto-acoes">
                 ${demo}
                 ${p.repo

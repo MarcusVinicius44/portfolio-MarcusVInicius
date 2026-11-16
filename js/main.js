@@ -1,5 +1,5 @@
 // Ponto de entrada: liga os módulos. Ordem dos scripts em cada página:
-// data/*.js (tecnologias, projetos, habilidades) → layout.js → i18n.js → hero.js → projetos.js → habilidades.js → menu.js → animacoes.js → main.js
+// data/*.js (tecnologias, projetos, habilidades) → layout.js → i18n.js → hero.js → projetos.js → habilidades.js → menu.js → animacoes.js → efeitos.js → main.js
 // (habilidades só é carregado na home)
 document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
@@ -18,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initObserver();
     initHeaderScroll();
     initBurgerMenu();
+    initEfeitos();
 });
