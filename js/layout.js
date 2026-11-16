@@ -30,11 +30,11 @@
     if (footer) {
         footer.outerHTML = `
     <footer class="footer">
-        <p data-i18n="footer_text">&copy; 2026 Marcus Vincius. Todos os direitos reservados.</p>
+        <p data-i18n="footer_text">&copy; 2026 Marcus Vinicius. Todos os direitos reservados.</p>
         <div class="social-links">
             <a href="https://github.com/MarcusVinicius44" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/marcus-vinicius44" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:marcusesc44@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:marcusvvinicius2017@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>`;
     }

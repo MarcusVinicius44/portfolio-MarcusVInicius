@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#g)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="2"><rect x="80" y="80" width="260" height="160" rx="16"/><rect x="860" y="440" width="260" height="160" rx="16"/><path d="M80 560h200M80 600h140M920 100h200M960 140h160"/></g>
+<text x="600" y="330" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="110" font-weight="700" fill="#fff">Profort ERP</text>
+<text x="600" y="410" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="38" fill="#fff" fill-opacity=".8">ERP para supermercados</text>
+</svg>

@@ -14,4 +14,6 @@ function renderSkills() {
     // O card "Tecnologias" de Sobre Mim sempre reflete a lista real
     const stat = document.getElementById('stat-tecnologias');
     if (stat) stat.dataset.target = HABILIDADES.reduce((total, g) => total + g.itens.length, 0);
+    const statProj = document.getElementById('stat-projetos');
+    if (statProj && typeof PROJETOS !== 'undefined') statProj.dataset.target = PROJETOS.length;
 }

@@ -144,13 +144,13 @@ function renderProjectDetail() {
     const back = `<a href="projetos.html" class="voltar-link"><i class="fas fa-arrow-left"></i> ${escapeHtml(t('back_to_projects', 'Voltar aos projetos'))}</a>`;
 
     if (!p) {
-        document.title = t('page_title_projects', 'Projetos - Marcus Vincius');
+        document.title = t('page_title_projects', 'Projetos - Marcus Vinicius');
         el.innerHTML = `${back}<p class="projeto-descricao">${escapeHtml(t('project_not_found', 'Projeto não encontrado.'))}</p>`;
         return;
     }
 
     const text = localized(p);
-    document.title = `${p.nome} - Marcus Vincius`;
+    document.title = `${p.nome} - Marcus Vinicius`;
 
     const demo = p.demo
         ? `<a href="${escapeHtml(p.demo)}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-arrow-up-right-from-square"></i> ${escapeHtml(t('project_site', 'Ver site'))}</a>`
